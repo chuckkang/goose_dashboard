@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title></title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="css/style.css" rel="stylesheet">
+	</head>
+	<body>
+	This will be the index page of the project!
+	<h1> Goose Apps!<h1>
+		<h2><a href="/edit/new">Add New</a></h2>
+		<% for (var goose in data) { %>
+			<h2><a href="/goosedetail/<%=data[goose].id%>"><%=data[goose].name%></a>--<a href="/edit/<%=data[goose].id%>">Edit</a>--<a href="/delete/<%=data[goose].id%>">delete</a><br></h2>
+			<%=data[goose].color%>--<%=data[goose].date%>
+		<%} %>
+	</body>
+</html>

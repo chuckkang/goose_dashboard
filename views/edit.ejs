@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+	<a href="/">home</a>-----
+	<h1>This is is the Goose Edit:</h1>
+	<form method="post" action="/<%=goosedetail[0].id%>">
+	Name: <input type="text" name="name" value="<%=goosedetail[0].name%>"><br> 
+	Color:<input type="text" name="color" value="<%=goosedetail[0].color%>"><br> 
+	<% if (goosedetail[0].date) {%>
+		Date Added:	<%=goosedetail[0].date%><br>
+	<%}%>
+	<input type="submit" name="Continue">
+	</form>
+</body>
+
+</html>
